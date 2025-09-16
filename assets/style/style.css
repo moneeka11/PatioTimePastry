@@ -49,6 +49,7 @@ h6 {
     padding-bottom: 82px;
 }
 
+
 .button {
     position: relative;
     z-index: 9;
@@ -138,14 +139,16 @@ h6 {
 
 .site_header {
     padding: 24px 0;
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1000; */
     background: var(--color-background);
     transition: all 0.3s ease;
 
 }
-
+.menu_toggle_icon{
+    display: none;
+}
 .header_right_content {
     gap: 24px;
 }
@@ -788,7 +791,8 @@ footer {
     padding: 30px 20px;
 }
 
-.contact_info_links .links_wrapper .cpyright_txt , .contact_info_links .links_wrapper .pt_info a{
+.contact_info_links .links_wrapper .cpyright_txt,
+.contact_info_links .links_wrapper .pt_info a {
     font-size: 14px;
     color: #fff;
 }
@@ -796,6 +800,29 @@ footer {
 
 
 @media (max-width:992px) {
+    .banner_section {
+        height: 100%;
+        padding: 80px 0;
+    }
+    .site_header .left-menu .left_menu_list, .header_right_content .menu_list_wrapper .menu_list{
+        display: none;
+    }
+    .menu_toggle_icon{
+        display: flex;
+    }
+
+    .category_section .content_wrapper:nth-child(1) {
+        padding: 0px 32px 0px 0px;
+    }
+
+    .category_section .content_wrapper:nth-child(2) {
+        padding: 80px 16px 0 16px;
+    }
+
+    .category_section .content_wrapper:nth-child(3) {
+        padding: 0px 0 0px 32px;
+    }
+
     .story_section .story_section_cardwrapper {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -833,9 +860,130 @@ footer {
     .contact_info_links .links_wrapper {
         flex-wrap: wrap;
     }
+
+    .event_banner_section .event_banner_content {
+        padding: 0 70px;
+    }
+
+    .menu_wrapper_section .menu_list_wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 50px;
+    }
+
+    .banner_section .banner_content .banner-title {
+        font-size: 60px;
+    }
+
+    .about_section .about_content .about-title,
+    .event_banner_section .event_banner_content .content_wrapper .text_container .title,
+    .menu_banner_section .menu_banner-leftcontent .content_wrapper .pt-title , .story_section .story_section_cardwrapper .card_wrapper .content_wrapper .pt-title  {
+        font-size: 48px;
+    }
+     .menu_banner_section .menu_banner-leftcontent .content_wrapper{
+        padding: 40px;
+     }
+
+}
+
+@media (max-width:767px) {
+    .banner_section .banner_content {
+        width: 86%;
+    }
+
+    .section-padding-top {
+        padding-top: 62px;
+    }
+
+    .section-padding-bottom {
+        padding-bottom: 62px;
+    }
+
+    .banner_section .banner_content .banner-title {
+        font-size: 40px;
+    }
+
+    .about_section .about_content .about-title,
+    .event_banner_section .event_banner_content .content_wrapper .text_container .title,
+    .menu_banner_section .menu_banner-leftcontent .content_wrapper .pt-title , .story_section .story_section_cardwrapper .card_wrapper .content_wrapper .pt-title {
+        font-size: 32px;
+    }
+    .menu_banner_section .menu_banner-leftcontent .content_wrapper{
+        padding: 40px;
+    }
+
+    .category_section .content_wrapper:nth-child(1) {
+        padding: 0px 22px 0px 0px;
+    }
+
+    .category_section .content_wrapper:nth-child(2) {
+        padding: 60px 6px 0 6px;
+    }
+
+    .category_section .content_wrapper:nth-child(3) {
+        padding: 0px 0 0px 22px;
+    }
+
+    .event_banner_section {
+        padding: 120px 0;
+    }
+
+    .event_banner_section .event_banner_content {
+        padding: 0 50px;
+    }
+
+    .story_section .story_section_cardwrapper {
+        gap: 32px;
+    }
+
+    .menu_banner_section {
+        flex-direction: column;
+
+    }
+
+    .menu_banner_section .menu_banner-leftcontent,
+    .menu_banner_section .menu_banner-rightcontent {
+        width: 100%;
+    }
+
+    .menu_banner-rightcontent {
+        height: 300px;
+    }
+
+    .food_category_images_wrapper {
+        flex-wrap: wrap;
+    }
+
+    .food_category_images_wrapper .pt-cta-wrap {
+        width: 50%;
+    }
+    .food_category_images_wrapper .pt-cta-wrap .pt-cta-content .pt-cta-title{
+        font-size: 24px;
+    }
+
 }
 
 @media (max-width:576px) {
+    .event_banner_section {
+        padding: 80px 0;
+    }
+
+    .about_section .about_content {
+        margin-bottom: 38px;
+    }
+
+    .story_section .story_section_cardwrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .story_section .story_section_cardwrapper .card_wrapper:nth-child(2){
+        grid-column: auto;
+    }
+
+    .category_section .content_wrapper:nth-child(1),
+    .category_section .content_wrapper:nth-child(2),
+    .category_section .content_wrapper:nth-child(3) {
+        padding: 0 16px;
+    }
+
     .container {
         padding-right: 16px;
         padding-left: 16px;
@@ -849,13 +997,22 @@ footer {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 36px;
     }
-     .contact_info_links .links_wrapper .cpyright_txt{
-          padding: 20px 20px;
-     }
+
+    .contact_info_links .links_wrapper .cpyright_txt {
+        padding: 20px 20px;
+    }
 
     .contact_info_links .links_wrapper .pt_info {
         width: 100%;
-          padding: 20px 20px;
+        padding: 20px 20px;
+    }
+
+    .event_banner_section .event_banner_content {
+        padding: 0 20px;
+    }
+
+    .food_category_images_wrapper .pt-cta-wrap {
+        width: 100%;
     }
 
 }
