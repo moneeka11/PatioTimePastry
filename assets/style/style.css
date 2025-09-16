@@ -732,7 +732,46 @@ h6 {
     font-size: 14px;
 }
 
+footer {
+    background-color: #000;
+}
 
+.pt_service_wrapper {
+    padding: 60px 0;
+    border-bottom: 1px dashed #FFFFFF3D;
+}
+
+.pt_service_wrapper .service_cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.pt_service_wrapper .service_cards .card_wrapper,
+.pt_service_wrapper .service_cards .card_wrapper .pt_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pt_service_wrapper .service_cards .card_wrapper .icon-wrapper img {
+    width: 40px;
+    height: 40px;
+}
+
+.pt_service_wrapper .service_cards .card_wrapper .pt_content_wrapper .pt-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.pt_service_wrapper .service_cards .card_wrapper .pt_content_wrapper .pt-title-text {
+    font-size: 14px;
+    color: #fff;
+}
 
 
 
@@ -754,6 +793,11 @@ h6 {
         grid-column: 1 / -1;
     }
 
+    .pt_service_wrapper .service_cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
 }
 
 @media (max-width:576px) {
@@ -761,9 +805,13 @@ h6 {
         padding-right: 16px;
         padding-left: 16px;
     }
-     .contact_info_wrapper .contact_grid_wrapper {
-        grid-template-columns: 1fr ;
+
+    .contact_info_wrapper .contact_grid_wrapper {
+        grid-template-columns: 1fr;
+    }
+ .pt_service_wrapper .service_cards {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 36px;
     }
 
-    
 }
